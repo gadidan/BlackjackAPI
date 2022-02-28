@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="blackjackModelStoreContainer" CdmEntityContainer="blackjackEntities">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="blackjackModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetPersons" FunctionName="blackjackModel.Store.GetPersons">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="blackjackModel.GetPersons_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPersonById" FunctionName="blackjackModel.Store.GetPersonById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="blackjackModel.GetPersonById_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertPerson" FunctionName="blackjackModel.Store.InsertPerson" />
+    <FunctionImportMapping FunctionImportName="UpdatePerson" FunctionName="blackjackModel.Store.UpdatePerson" />
+    <FunctionImportMapping FunctionImportName="DeletePerson" FunctionName="blackjackModel.Store.DeletePerson" />
+  </EntityContainerMapping>
+</Mapping>
